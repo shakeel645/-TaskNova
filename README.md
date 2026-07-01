@@ -7,6 +7,9 @@ TaskNova is a modern Full Stack Smart Task Management System developed using **P
 The system provides task creation, updating, deletion, task completion tracking, productivity monitoring, search functionality, filtering options, and a beautiful dashboard inspired by modern SaaS applications.
 
 ---
+## 🌐 Live Demo
+
+🚀 https://tasknova-x7q6.onrender.com
 
 # 🎯 Project Objective
 
