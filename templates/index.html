@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow | Smart Task Manager</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="bg-circle circle1"></div>
+    <div class="bg-circle circle2"></div>
+
+    <!-- Main Container -->
+
+    <div class="container">
+
+        <!-- Header -->
+
+        <header>
+
+            <div class="logo">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                <h1 class="logo-title">
+                <span class="task">Task</span>
+                <span class="nova">Nova</span>
+                </h1>
+
+            </div>
+
+            <button id="themeBtn" aria-label="Toggle Dark Mode">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+        </header>
+
+        <!-- Hero -->
+
+        <section class="hero">
+
+            <h2 class="hero-title">
+    <span class="smart">Smart</span>
+    <span class="task">Task</span>
+    <span class="manager">Manager</span>
+        </h2>
+
+            <p class="hero-subtitle">
+    <span class="stay1">Stay</span>
+    <span class="organized">Organized.</span>
+
+    <span class="stay2">Stay</span>
+    <span class="productive">Productive.</span>
+</p>
+
+        </section>
+
+        <!-- Add Task -->
+
+        <section class="task-box">
+
+            <div class="input-group">
+
+                <label for="taskInput">Task</label>
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter your task...">
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="priority">Priority</label>
+
+                <select id="priority">
+
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+
+                </select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="date">Due Date</label>
+
+                <input
+                    type="date"
+                    id="date">
+
+            </div>
+
+            <button
+                id="addTask"
+                aria-label="Add Task">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Task
+
+            </button>
+
+        </section>
+
+        <!-- Dashboard -->
+
+        <section class="dashboard">
+
+            <div class="card">
+
+                <i class="fa-solid fa-list"></i>
+
+                <h3>Total</h3>
+
+                <span id="totalTask">0</span>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h3>Completed</h3>
+
+                <span id="completedTask">0</span>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h3>Pending</h3>
+
+                <span id="pendingTask">0</span>
+
+            </div>
+
+        </section>
+
+        <!-- Search -->
+
+        <section class="search-area">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search task...">
+
+        </section>
+
+        <!-- Filters -->
+
+        <section class="filters">
+
+            <button class="filter active">All</button>
+
+            <button class="filter">Completed</button>
+
+            <button class="filter">Pending</button>
+
+        </section>
+
+        <!-- Progress -->
+
+        <section class="progress-box">
+
+            <div class="progress-text">
+
+                <span>Productivity</span>
+
+                <span id="progressPercent">0%</span>
+
+            </div>
+
+            <div class="progress">
+
+                <div class="progress-bar"></div>
+
+            </div>
+
+        </section>
+
+        <!-- Task List -->
+
+        <section class="tasks">
+
+            <ul id="taskList">
+
+                <!-- JavaScript Tasks -->
+
+            </ul>
+
+        </section>
+
+    </div>
+
+    <!-- JavaScript -->
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1586 @@
+/*==========================================
+        GOOGLE FONT & RESET
+==========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:linear-gradient(135deg,#0f172a,#1e293b,#312e81);
+
+    overflow-x:hidden;
+
+    color:#fff;
+
+    position:relative;
+
+}
+
+/*==========================================
+        ANIMATED BACKGROUND
+==========================================*/
+
+.bg-circle{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    filter:blur(100px);
+
+    opacity:.35;
+
+    z-index:-1;
+
+    animation:float 8s ease-in-out infinite;
+
+}
+
+.circle1{
+
+    width:300px;
+    height:300px;
+
+    background:#00e5ff;
+
+    top:-100px;
+    left:-100px;
+
+}
+
+.circle2{
+
+    width:350px;
+    height:350px;
+
+    background:#7c3aed;
+
+    bottom:-120px;
+    right:-120px;
+
+}
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(40px);
+
+}
+
+}
+
+/*==========================================
+        MAIN CONTAINER
+==========================================*/
+
+.container{
+
+width:min(1200px,95%);
+
+margin:auto;
+
+padding:40px 0;
+
+}
+
+/*==========================================
+            HEADER
+==========================================*/
+
+header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:50px;
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.logo i{
+
+font-size:40px;
+
+color:#38bdf8;
+
+}
+
+.logo h1{
+
+font-size:34px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+}
+
+#themeBtn{
+
+width:60px;
+
+height:60px;
+
+border:none;
+
+border-radius:50%;
+
+cursor:pointer;
+
+background:rgba(255,255,255,.08);
+
+color:white;
+
+font-size:22px;
+
+transition:.4s;
+
+box-shadow:
+
+0 8px 20px rgba(0,0,0,.4);
+
+}
+
+#themeBtn:hover{
+
+transform:rotate(180deg) scale(1.1);
+
+background:#38bdf8;
+
+}
+
+/*==========================================
+            HERO
+==========================================*/
+
+.hero{
+
+text-align:center;
+
+margin-bottom:50px;
+
+}
+
+.hero h2{
+
+font-size:48px;
+
+font-weight:700;
+
+margin-bottom:10px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+opacity:.8;
+
+}
+
+/*==========================================
+            TASK BOX
+==========================================*/
+
+.task-box{
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+padding:30px;
+
+border-radius:25px;
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr auto;
+
+gap:20px;
+
+margin-bottom:40px;
+
+box-shadow:
+
+0 10px 40px rgba(0,0,0,.3);
+
+}
+
+.input-group{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.input-group label{
+
+margin-bottom:8px;
+
+font-size:14px;
+
+opacity:.8;
+
+}
+
+.task-box input,
+
+.task-box select{
+
+height:55px;
+
+border:none;
+
+outline:none;
+
+border-radius:15px;
+
+padding:0 18px;
+
+background:rgba(255,255,255,.12);
+
+color:white;
+
+font-size:15px;
+
+}
+
+.task-box input::placeholder{
+
+color:#ddd;
+
+}
+
+.task-box select option{
+
+color:black;
+
+}
+
+#addTask{
+
+align-self:end;
+
+height:55px;
+
+padding:0 30px;
+
+border:none;
+
+border-radius:15px;
+
+cursor:pointer;
+
+background:linear-gradient(135deg,#0ea5e9,#2563eb);
+
+color:white;
+
+font-size:16px;
+
+font-weight:600;
+
+transition:.4s;
+
+}
+
+#addTask:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+
+0 10px 30px rgba(37,99,235,.5);
+
+}
+/*==========================================
+        DASHBOARD
+==========================================*/
+
+.dashboard{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-bottom:40px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.15);
+padding:30px;
+border-radius:25px;
+text-align:center;
+transition:.4s;
+cursor:pointer;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 15px 40px rgba(0,0,0,.4);
+
+}
+
+.card i{
+
+font-size:45px;
+margin-bottom:15px;
+color:#38bdf8;
+
+}
+
+.card h3{
+
+font-size:20px;
+margin-bottom:10px;
+
+}
+
+.card span{
+
+font-size:35px;
+font-weight:700;
+color:#00e5ff;
+
+}
+
+/*==========================================
+        SEARCH
+==========================================*/
+
+.search-area{
+
+margin-bottom:25px;
+
+}
+
+.search-area input{
+
+width:100%;
+height:60px;
+border:none;
+outline:none;
+border-radius:18px;
+padding:0 20px;
+font-size:16px;
+background:rgba(255,255,255,.08);
+color:white;
+
+}
+
+.search-area input::placeholder{
+
+color:#ddd;
+
+}
+
+/*==========================================
+        FILTER BUTTONS
+==========================================*/
+
+.filters{
+
+display:flex;
+gap:15px;
+margin-bottom:35px;
+flex-wrap:wrap;
+
+}
+
+.filter{
+
+padding:12px 25px;
+border:none;
+cursor:pointer;
+border-radius:40px;
+background:rgba(255,255,255,.08);
+color:white;
+font-size:15px;
+transition:.4s;
+
+}
+
+.filter:hover,
+.filter.active{
+
+background:#2563eb;
+
+}
+
+/*==========================================
+        PROGRESS BAR
+==========================================*/
+
+.progress-box{
+
+background:rgba(255,255,255,.08);
+padding:25px;
+border-radius:20px;
+margin-bottom:40px;
+
+}
+
+.progress-text{
+
+display:flex;
+justify-content:space-between;
+margin-bottom:15px;
+font-weight:600;
+
+}
+
+.progress{
+
+height:14px;
+background:rgba(255,255,255,.15);
+border-radius:20px;
+overflow:hidden;
+
+}
+
+.progress-bar{
+
+width:0%;
+height:100%;
+background:linear-gradient(90deg,#00e5ff,#2563eb);
+border-radius:20px;
+transition:.5s;
+
+}
+
+/*==========================================
+        TASK LIST
+==========================================*/
+
+.tasks{
+
+display:flex;
+flex-direction:column;
+gap:20px;
+
+}
+
+.tasks ul{
+
+list-style:none;
+
+}
+
+.tasks li{
+
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.12);
+padding:20px;
+border-radius:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+transition:.4s;
+
+}
+
+.tasks li:hover{
+
+transform:translateY(-5px);
+
+}
+
+.task-info h3{
+
+margin-bottom:8px;
+font-size:18px;
+
+}
+
+.task-info p{
+
+opacity:.7;
+font-size:14px;
+
+}
+
+.task-actions{
+
+display:flex;
+gap:10px;
+
+}
+
+.task-actions button{
+
+width:45px;
+height:45px;
+border:none;
+cursor:pointer;
+border-radius:12px;
+color:white;
+font-size:16px;
+transition:.3s;
+
+}
+
+.edit{
+
+background:#2563eb;
+
+}
+
+.delete{
+
+background:#ef4444;
+
+}
+
+.complete{
+
+background:#22c55e;
+
+}
+
+.task-actions button:hover{
+
+transform:scale(1.1);
+
+}
+
+/*==========================================
+        SCROLLBAR
+==========================================*/
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#38bdf8;
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#111827;
+
+}
+
+/*==========================================
+        RESPONSIVE
+==========================================*/
+
+@media(max-width:992px){
+
+.task-box{
+
+grid-template-columns:1fr;
+
+}
+
+.dashboard{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h2{
+
+font-size:34px;
+
+}
+
+header{
+
+flex-direction:column;
+gap:20px;
+
+}
+
+.filters{
+
+justify-content:center;
+
+}
+
+.tasks li{
+
+flex-direction:column;
+align-items:flex-start;
+gap:20px;
+
+}
+
+.task-actions{
+
+width:100%;
+
+}
+
+.task-actions button{
+
+flex:1;
+
+}
+
+}
+/*==========================================
+        DARK MODE
+==========================================*/
+
+body.dark{
+
+background:linear-gradient(135deg,#020617,#0f172a,#111827);
+
+}
+
+body.dark .card,
+body.dark .task-box,
+body.dark .progress-box,
+body.dark .tasks li,
+body.dark .search-area input{
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+body.dark input,
+body.dark select{
+
+background:rgba(255,255,255,.08);
+
+color:#fff;
+
+}
+
+/*==========================================
+        GLOW EFFECT
+==========================================*/
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+border-radius:25px;
+
+background:linear-gradient(135deg,
+rgba(255,255,255,.12),
+transparent);
+
+opacity:0;
+
+transition:.5s;
+
+pointer-events:none;
+
+}
+
+.card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.card:hover::before{
+
+opacity:1;
+
+}
+
+/*==========================================
+        BUTTON ANIMATION
+==========================================*/
+
+button{
+
+transition:.35s ease;
+
+}
+
+button:hover{
+
+transform:translateY(-3px);
+
+}
+
+button:active{
+
+transform:scale(.96);
+
+}
+
+/*==========================================
+        INPUT FOCUS
+==========================================*/
+
+input:focus,
+select:focus{
+
+border:2px solid #38bdf8;
+
+box-shadow:0 0 15px rgba(56,189,248,.4);
+
+}
+
+/*==========================================
+        TASK ANIMATION
+==========================================*/
+
+.tasks li{
+
+animation:slideUp .5s ease;
+
+}
+
+@keyframes slideUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*==========================================
+        HERO ANIMATION
+==========================================*/
+
+.hero{
+
+animation:fadeIn 1s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(-40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*==========================================
+        LOGO ANIMATION
+==========================================*/
+
+.logo i{
+
+animation:rotateIcon 6s linear infinite;
+
+}
+
+@keyframes rotateIcon{
+
+0%{
+
+transform:rotate(0deg);
+
+}
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/*==========================================
+        CARD ICON HOVER
+==========================================*/
+
+.card:hover i{
+
+transform:scale(1.2);
+
+transition:.4s;
+
+}
+
+/*==========================================
+        PROGRESS ANIMATION
+==========================================*/
+
+.progress-bar{
+
+animation:progressGlow 2s infinite alternate;
+
+}
+
+@keyframes progressGlow{
+
+from{
+
+filter:brightness(1);
+
+}
+
+to{
+
+filter:brightness(1.4);
+
+}
+
+}
+
+/*==========================================
+        FOOTER SPACE
+==========================================*/
+
+body{
+
+padding-bottom:60px;
+
+}
+/* ===========================
+        TASK ACTION BUTTONS
+=========================== */
+
+.task-actions{
+
+    display:flex;
+    gap:12px;
+    align-items:center;
+
+}
+
+.task-actions button{
+
+    width:50px;
+    height:50px;
+
+    border:none;
+    outline:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#fff;
+
+    transition:0.35s ease;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.25);
+
+}
+
+/* Complete Button */
+
+.task-actions button:first-child{
+
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+
+}
+
+/* Delete Button */
+
+.task-actions button:last-child{
+
+    background:linear-gradient(135deg,#ef4444,#dc2626);
+
+}
+
+/* Hover */
+
+.task-actions button:hover{
+
+    transform:translateY(-5px) scale(1.08);
+
+    box-shadow:
+    0 12px 25px rgba(0,0,0,.35);
+
+}
+
+/* Click */
+
+.task-actions button:active{
+
+    transform:scale(.92);
+
+}
+.task-box{
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.35);
+
+}
+.task-box input:hover,
+.task-box select:hover{
+
+transform:translateY(-3px);
+
+transition:.4s;
+
+box-shadow:0 0 20px rgba(56,189,248,.4);
+
+}
+.task-box{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.task-box::before{
+
+content:"";
+
+position:absolute;
+
+inset:-2px;
+
+background:linear-gradient(
+90deg,
+#38bdf8,
+);
+
+background-size:300%;
+
+animation:borderMove 5s linear infinite;
+
+z-index:-1;
+
+}
+
+@keyframes borderMove{
+
+100%{
+
+background-position:300%;
+
+}
+
+}
+#addTask{
+
+background:linear-gradient(
+135deg,
+#00c6ff,
+#0072ff
+);
+
+box-shadow:
+0 10px 30px rgba(0,114,255,.4);
+
+}
+
+#addTask:hover{
+
+transform:
+translateY(-6px)
+scale(1.05);
+
+}
+/* ==========================
+        HERO TITLE
+========================== */
+
+.hero-title{
+
+    font-size:70px;
+    font-weight:800;
+    text-align:center;
+    margin-bottom:20px;
+
+}
+
+.hero-title span{
+
+    cursor:pointer;
+    transition:.4s;
+
+}
+
+/* Smart */
+
+.smart{
+
+    color:#38bdf8;
+
+}
+
+/* Task */
+
+.task{
+
+    color:#ffffff;
+
+}
+
+/* Manager */
+
+.manager{
+
+    color:#8b5cf6;
+
+}
+
+
+/* Blink */
+
+@keyframes blink{
+
+0%,100%{
+
+opacity:1;
+
+}
+
+50%{
+
+opacity:.4;
+
+}
+}
+.hero-title span:hover{
+
+letter-spacing:1px;
+
+filter:drop-shadow(0 0 10px currentColor);
+
+}
+/*==============================
+        HERO SUBTITLE
+==============================*/
+
+.hero-subtitle{
+
+    margin-top:20px;
+
+    font-size:24px;
+
+    font-weight:500;
+
+    text-align:center;
+
+}
+
+.hero-subtitle span{
+
+    cursor:pointer;
+
+    transition:.4s ease;
+
+}
+
+/* Stay */
+
+.stay1,
+.stay2{
+
+    color:#ffffff;
+
+}
+
+/* Organized */
+
+.organized{
+
+    color:#00d4ff;
+
+}
+
+/* Productive */
+
+.productive{
+
+    color:#a855f7;
+
+}
+
+/* Hover */
+
+.hero-subtitle span:hover{
+
+    transform:translateY(-4px) scale(1.08);
+
+    text-shadow:
+    0 0 10px currentColor,
+    0 0 20px currentColor,
+    0 0 35px currentColor;
+
+    animation:subtitleBlink .8s infinite;
+
+}
+
+/* Blink */
+
+@keyframes subtitleBlink{
+
+0%,100%{
+
+opacity:1;
+
+}
+
+50%{
+
+opacity:.5;
+
+}
+}
+.logo-title{
+    font-size:38px;
+    font-weight:800;
+    cursor:pointer;
+}
+
+.logo-title span{
+    transition:.4s;
+}
+
+.task{
+    color:#38bdf8;
+}
+
+.nova{
+    color:#8b5cf6;
+}
+
+.logo-title:hover .task{
+    text-shadow:0 0 20px #38bdf8;
+}
+
+.logo-title:hover .nova{
+    text-shadow:0 0 20px #8b5cf6;
+}
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-100%;
+
+width:100%;
+
+height:4px;
+
+background:
+
+linear-gradient(
+90deg,
+#00d4ff,
+#7c3aed,
+#00d4ff
+);
+
+transition:.6s;
+
+}
+
+.card:hover::before{
+
+left:100%;
+
+}
+.card i{
+
+font-size:48px;
+
+transition:.4s;
+
+}
+
+.card:hover i{
+
+transform:rotate(10deg) scale(1.2);
+
+color:#00e5ff;
+
+filter:
+
+drop-shadow(0 0 15px #00e5ff);
+
+}.card span{
+
+font-size:52px;
+
+font-weight:800;
+
+color:#00d4ff;
+
+text-shadow:
+
+0 0 20px rgba(0,212,255,.5);
+
+}.search-area input{
+
+height:70px;
+
+font-size:20px;
+
+padding-left:60px;
+
+border-radius:20px;
+
+transition:.4s;
+
+}
+
+.search-area{
+
+position:relative;
+
+}
+
+.search-area::before{
+
+content:"🔍";
+
+position:absolute;
+
+left:20px;
+
+top:22px;
+
+font-size:24px;
+
+}
+
+.search-area input:focus{
+
+box-shadow:
+
+0 0 25px rgba(0,212,255,.5);
+
+transform:scale(1.01);
+
+}.filter{
+
+padding:16px 35px;
+
+font-size:18px;
+
+font-weight:600;
+
+border-radius:40px;
+
+transition:.4s;
+
+}
+
+.filter:hover{
+
+transform:
+translateY(-5px);
+
+box-shadow:
+
+0 10px 25px rgba(37,99,235,.4);
+
+}.filter.active{
+
+background:
+
+linear-gradient(
+135deg,
+#00c6ff,
+#88b4ea
+);
+
+}.progress-box{
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,.3);
+
+}.progress-box{
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,.3);
+
+}.card:hover{
+
+border:
+
+1px solid rgba(0,212,255,.5);
+
+}
+.card{
+
+animation:
+
+fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:
+
+translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+
+translateY(0);
+
+}
+
+}
+.dashboard{
+
+position:relative;
+
+}
+
+.dashboard::after{
+
+content:"";
+
+position:absolute;
+
+width:400px;
+
+height:400px;
+
+background:#7c3aed;
+
+filter:blur(180px);
+
+opacity:.2;
+
+right:-150px;
+
+top:-150px;
+
+z-index:-1;
+
+}
+
+/*==========================================
+        PRODUCTIVITY CARD
+==========================================*/
+
+.progress-box{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:35px;
+
+    margin-top:30px;
+
+    border-radius:28px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(15,23,42,.95),
+        rgba(30,41,59,.95)
+    );
+
+    border:1px solid rgba(0,255,255,.15);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.35),
+        inset 0 1px 1px rgba(255,255,255,.08);
+
+    transition:.5s;
+
+}
+
+.progress-box:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#00d4ff;
+
+    box-shadow:
+        0 25px 60px rgba(0,212,255,.25);
+
+}
+.progress-text{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+.progress-text span:first-child{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+}
+
+.progress-text span:last-child{
+
+    color:#00d4ff;
+
+    font-size:26px;
+
+    font-weight:700;
+
+}.progress-bar{
+
+    width:0%;
+
+    height:100%;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        90deg,
+        #06b6d4,
+        #2563eb,
+        #7c3aed
+    );
+
+    background-size:300%;
+
+    animation:moveGradient 4s linear infinite;
+
+    transition:width .6s ease;
+
+}@keyframes moveGradient{
+
+0%{
+
+background-position:0%;
+
+}
+
+100%{
+
+background-position:300%;
+
+}
+
+}.progress-box::before{
+
+content:"";
+
+position:absolute;
+
+top:-100px;
+
+right:-100px;
+
+width:250px;
+
+height:250px;
+
+background:#00d4ff;
+
+opacity:.15;
+
+filter:blur(120px);
+
+border-radius:50%;
+
+}
